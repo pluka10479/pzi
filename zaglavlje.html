@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kupi Kartu</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+    <!-- Templte js -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <!-- <script src="js/contact_me.js"></script> -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/script.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- Start Logo Section -->
+<section id="logo-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="logo">
+                    <a href="index.php"><h1></h1></a>
+                    <span>Vaš slogan ovdje</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="korisnik" class="pull-right">
+                    <?php if(isset($_SESSION['korisnicko_ime'])): ?>
+                        <span class="poruka">Prijavljeni ste kao</span> <a href="#"><?php echo $_SESSION['korisnicko_ime'] ?></a> |
+                        <a href="odjava.php">Odjava</a>
+                    <?php else: ?>
+                        <span class="poruka">Molimo prijavite se kako bi pristupili sustavu</span> |
+                        <i class="fa fa-edit"></i> <a href="#" data-toggle="modal" data-target="#registracijaModal">Registracija</a> |
+                        <i class="fa fa-lock"></i> <a href="#" data-toggle="modal" data-target="#prijavaModal">Prijava</a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Logo Section -->
